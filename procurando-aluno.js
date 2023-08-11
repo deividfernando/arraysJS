@@ -7,10 +7,16 @@ ExibeNomeENota('João');
 
 function ExibeNomeENota(aluno) {
     if (alunosEMedias[0].includes(aluno)) {
-        
-        const indice = alunosEMedias[0].indexOf(aluno);
+
+        // const alunos = alunosEMedias[0];
+        // const medias = alunosEMedias[1];
+
+        const [alunos, medias] = alunosEMedias;
+
+        let indice = alunos.indexOf(aluno);
+        let media = medias[indice] 
         //console.log(indice);
-        const media = alunosEMedias[1][indice];
+        
         console.log(`Aluno ${aluno} está cadastrado e sua média é ${media}`);
     } else {
         console.log(`Aluno não encotrado`);
